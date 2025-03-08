@@ -1,0 +1,76 @@
+---
+title: Quickstart
+description: Start using BrowserTools MCP
+---
+
+After [installing](/installation) BrowserTools MCP, you can start using it to analyze and interact with web pages.
+
+BrowserTools MCP provides a set of powerful features that allow you to:
+
+- Inspect DOM elements on web pages
+- View console logs and network requests
+- Take screenshots of the current page
+- Analyze and debug web applications
+
+## Analyzing Logs for Debugging & Validation
+
+One of the most powerful features of BrowserTools MCP is the ability to analyze logs from the browser console and network requests. This is particularly useful for debugging and validating web applications.
+
+To view console logs:
+
+```bash
+# Start the BrowserTools server
+npx @agentdeskai/browser-tools-server
+
+# Then in your AI assistant, you can use:
+getConsoleLogs()
+getConsoleErrors()
+```
+
+This will show you all the logs and errors that have been output to the console, helping you identify issues in your JavaScript code.
+
+For network requests, you can use:
+
+```bash
+getNetworkSuccessLogs()
+getNetworkErrorLogs()
+```
+
+These commands will show you successful and failed network requests, including details like URLs, request methods, status codes, and response bodies.
+
+## Updating & Debugging UI Components
+
+BrowserTools MCP also allows you to inspect and interact with UI components on web pages:
+
+```bash
+# Get information about the currently selected element
+getSelectedElement()
+
+# Take a screenshot of the current page
+takeScreenshot()
+```
+
+These features are particularly useful when you need to:
+
+- Analyze the structure of a web page
+- Debug layout issues
+- Understand how a component is implemented
+- Verify the appearance of UI elements
+
+## Requirements
+
+To use all features of BrowserTools MCP effectively, make sure you have:
+
+1. The BrowserTools server running locally
+2. A browser with the page you want to analyze open
+3. Permissions to access the page content (same-origin policy applies)
+
+<Info>
+  For security reasons, BrowserTools MCP can only access content on pages that explicitly allow it or that are in the same origin.
+</Info>
+
+<Tip>
+  You can clear all logs from memory using the `wipeLogs()` command. This is useful when you want to start fresh and only see new logs.
+</Tip>
+
+For more advanced usage and configuration options, refer to the [GitHub repository](https://github.com/AgentDeskAI/browser-tools-mcp).
