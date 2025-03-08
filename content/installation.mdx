@@ -1,0 +1,61 @@
+---
+title: Installation
+description: BrowserTools embeds AI code editors and agents directly into your web browser
+---
+
+## Getting Started
+
+BrowserTools MCP is a powerful tool that embeds AI code editors and agents directly into your web browser. This guide will help you get started with installing and using BrowserTools MCP.
+
+## Requirements
+
+Before installing BrowserTools MCP, make sure you have the following prerequisites:
+
+- Node.js 16.x or higher
+- npm 7.x or higher (or yarn)
+- A modern web browser (Chrome, Firefox, Edge, or Safari)
+
+## Installation
+
+To install BrowserTools MCP, run the following command in your terminal:
+
+```bash
+npx @agentdeskai/browser-tools-server
+```
+
+This will start the BrowserTools server locally. The first time you run this command, it will prompt you to install the package. Type 'y' to proceed with the installation.
+
+After installation, the server will start, and you should see output similar to:
+
+```
+BrowserTools server started on port 3000
+```
+
+You can now use BrowserTools MCP in your browser by navigating to the URL shown in the terminal.
+
+## Troubleshooting
+
+If you encounter any issues during installation or usage, here are some common troubleshooting steps:
+
+### Common Issues & Errors
+
+1. **Port already in use**
+
+   If you see an error like "Port 3000 is already in use", you can specify a different port:
+
+   ```bash
+   npx @agentdeskai/browser-tools-server --port 3001
+   ```
+
+2. **Permission denied**
+
+   If you encounter permission issues, try running the command with administrator privileges or using sudo (on Linux/macOS).
+
+3. **Connection issues**
+
+   If the browser extension cannot connect to the server, make sure:
+   - The server is running
+   - Your firewall is not blocking the connection
+   - You're using the correct URL
+
+For more detailed information and advanced usage, please refer to the [Quickstart](/quickstart) guide.
