@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: 22 163 74;
+  --primary-light: 7 201 131;
+  --primary-dark: 21 128 61;
+  --background-light: 255 255 255;
+  --background-dark: 9 13 13;
+  --gray-50: 243 247 245;
+  --gray-100: 238 242 240;
+  --gray-200: 223 227 224;
+  --gray-300: 206 211 208;
+  --gray-400: 159 163 160;
+  --gray-500: 112 116 114;
+  --gray-600: 80 84 82;
+  --gray-700: 63 67 64;
+  --gray-800: 38 42 39;
+  --gray-900: 23 27 25;
+}
+
+body {
+  @apply bg-background-light dark:bg-background-dark text-gray-900 dark:text-gray-50;
+}
+
+.dark body {
+  color-scheme: dark;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-dark text-white font-semibold py-2 px-4 rounded transition-colors;
+  }
+  
+  .nav-link {
+    @apply text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary-light transition-colors;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-lg shadow-md p-6;
+  }
+}
+
+/* Animation for border glow */
+@keyframes borderGlow {
+  0% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
+  50% { box-shadow: 0 0 6px 3px rgba(52, 211, 153, 0.25); }
+  100% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
+}
+
+.border-glow {
+  animation: borderGlow 1.8s ease-out forwards;
+}
