@@ -1,0 +1,93 @@
+---
+title: Contributing
+description: Architecture overview and contribution guide
+---
+
+We welcome contributions to BrowserTools MCP! This guide will help you understand the project architecture and how to contribute effectively.
+
+## Project Overview
+
+BrowserTools MCP consists of two main components:
+
+1. **Browser Extension**: Interacts with web pages and provides access to DOM elements, console logs, and network requests.
+2. **Local Server**: Acts as a bridge between the browser extension and AI assistants or other tools.
+
+## Development Setup
+
+To set up the development environment:
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/AgentDeskAI/browser-tools-mcp.git
+cd browser-tools-mcp
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Start the development server:
+
+```bash
+npm run dev
+```
+
+## Architecture
+
+The project follows a client-server architecture:
+
+- **Client (Browser Extension)**: 
+  - Injects scripts into web pages
+  - Captures DOM events, console logs, and network requests
+  - Communicates with the local server via WebSockets
+
+- **Server**:
+  - Provides an API for external tools to interact with the browser
+  - Manages connections to browser extensions
+  - Processes and formats data from the browser
+
+## Contribution Guidelines
+
+### Code Style
+
+We follow the standard JavaScript/TypeScript style guide. Please ensure your code is formatted with Prettier and passes ESLint checks:
+
+```bash
+npm run lint
+npm run format
+```
+
+### Pull Request Process
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Make your changes
+4. Run tests (`npm test`)
+5. Commit your changes (`git commit -m 'Add some amazing feature'`)
+6. Push to the branch (`git push origin feature/amazing-feature`)
+7. Open a Pull Request
+
+### Testing
+
+Please add tests for any new features or bug fixes. We use Jest for testing:
+
+```bash
+npm test
+```
+
+## Documentation
+
+When adding new features, please update the documentation accordingly. We use MDX for our documentation.
+
+<Warning>
+  Remember to test your changes thoroughly before submitting a pull request. Breaking changes should be clearly documented.
+</Warning>
+
+## Community
+
+Join our community on [GitHub Discussions](https://github.com/AgentDeskAI/browser-tools-mcp/discussions) to ask questions, share ideas, or get help with development.
+
+Thank you for contributing to BrowserTools MCP!
